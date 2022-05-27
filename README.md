@@ -4,7 +4,8 @@ I model the data I got from a game site and transferred it to the application wi
 
 ## Technologies
 + MVVM Architecture ✅ 
-+ Programmatically (Snapkit) ✅ 
++ Programmatically (Snapkit) ✅
++ SwiftyGif 
 + Kingfisher ✅ 
 + Alamofire ✅
 + Scroll View ✅ 
@@ -14,7 +15,7 @@ I model the data I got from a game site and transferred it to the application wi
 
 ## Demo
 
-Video alanı
+https://user-images.githubusercontent.com/97698649/170800041-a0efc236-d5fd-42a9-9278-8476af99bcdd.MP4
 
 ## API
 
@@ -38,5 +39,3 @@ class NetworkConstant{
     }   
 }
 ````
-# GameLibrary
-# GameLibrary
