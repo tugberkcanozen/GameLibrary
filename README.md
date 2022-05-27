@@ -5,7 +5,7 @@ I model the data I got from a game site and transferred it to the application wi
 ## Technologies
 + MVVM Architecture ✅ 
 + Programmatically (Snapkit) ✅
-+ SwiftyGif 
++ SwiftyGif ✅ 
 + Kingfisher ✅ 
 + Alamofire ✅
 + Scroll View ✅ 
