@@ -23,14 +23,14 @@ class GameDetailController: UIViewController {
     
     // MARK: - UI Elements
     private let imageView : UIImageView = {
-        let iv = UIImageView()
-        iv.translatesAutoresizingMaskIntoConstraints = false
-        iv.contentMode = .scaleToFill
-        iv.layer.cornerRadius = 15
-        iv.clipsToBounds = true
-        iv.layer.borderColor = UIColor.black.cgColor
-        iv.layer.borderWidth = 2
-        return iv
+        let detailImageView = UIImageView()
+        detailImageView.translatesAutoresizingMaskIntoConstraints = false
+        detailImageView.contentMode = .scaleToFill
+        detailImageView.layer.cornerRadius = 15
+        detailImageView.clipsToBounds = true
+        detailImageView.layer.borderColor = UIColor.black.cgColor
+        detailImageView.layer.borderWidth = 2
+        return detailImageView
     }()
     
     private let nameLabel: UILabel = {
@@ -225,7 +225,7 @@ extension GameDetailController {
     }
 }
 
-// MARK: - DetailControllerViewModel
+// MARK: - DetailController ViewModel
 extension GameDetailController: GameDetailViewDelegate {
     func handleOutPut(_ output: GameDetailOutPut) {
         switch output {

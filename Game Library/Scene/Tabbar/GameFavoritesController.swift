@@ -11,7 +11,6 @@ import SnapKit
 class GameFavoritesController: UIViewController {
         
     var favoritedGames: [Game] = [] {
-        
         didSet {
             collectionView.reloadData()
         }
@@ -50,7 +49,7 @@ class GameFavoritesController: UIViewController {
     
     // MARK: - Functions
     private func configure() {
-        subviews()
+        addSubviews()
         drawDesign()
         makeCollectionView()
     }
@@ -62,7 +61,7 @@ class GameFavoritesController: UIViewController {
         view.backgroundColor = .white
     }
     
-    private func subviews() {
+    private func addSubviews() {
         view.addSubview(collectionView)
     }
 }

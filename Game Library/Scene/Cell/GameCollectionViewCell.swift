@@ -102,6 +102,10 @@ extension GameCollectionViewCell {
             make.left.equalTo(gameImageView.snp.right).offset(10)
         }
     }
+}
+
+// MARK: - CollectionView Cell Sync
+extension GameCollectionViewCell {
     
     func saveModel(model: GameResult) {
         gameMetacriticLabel.text = "Metacritic: \(model.rating)"
@@ -110,12 +114,10 @@ extension GameCollectionViewCell {
         gameImageView.kf.setImage(with: URL(string: model.backgroundImage)!)
     }
     
-    
     func saveFavoriteGame(model: Game) {
         gameNameLabel.text = model.name
         gameReleasedLabel.text = ("Released Date: \(model.released ?? "relased")")
         gameMetacriticLabel.text = ("Rating: \(model.metacritic ?? "Metacritic Score") 🏆")
         gameImageView.kf.setImage(with: URL(string: model.backgroundImage ?? ""))
     }
-     
 }

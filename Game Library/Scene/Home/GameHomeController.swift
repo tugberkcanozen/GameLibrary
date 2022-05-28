@@ -26,12 +26,8 @@ final class GameHomeController: UIViewController, gameOutput {
     }
     
     private var viewModel: IGameViewModel = GameViewModel(service: Services())
-    private let service = Services()
-    private var search = [GameResult]()
     private var searchData: [GameResult] = []
     private var isSearch = Bool()
-    private var scrollerResult = [GameResult]()
-    
     
     // MARK: - UI ELEMENTS
     private let searchController: UISearchController = {
@@ -118,8 +114,6 @@ final class GameHomeController: UIViewController, gameOutput {
         viewModel.delegate = self
         viewModel.fetchGames { [weak self] model in
             var collectionViewData = model
-            
-            
             for i in 0...4 {
                 collectionViewData?.remove(at: i)
             }
@@ -192,7 +186,6 @@ final class GameHomeController: UIViewController, gameOutput {
     }
 }
 
-
 // MARK: - Search Result Functions
 extension GameHomeController: UISearchResultsUpdating {
     
@@ -259,7 +252,7 @@ extension GameHomeController: UIScrollViewDelegate {
 extension GameHomeController: UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        
+    
         let flowLayout = collectionViewLayout as! UICollectionViewFlowLayout
         flowLayout.minimumLineSpacing = 15
         return CGSize( width: collectionView.frame.size.width, height: collectionView.frame.size.height / 2.8)
