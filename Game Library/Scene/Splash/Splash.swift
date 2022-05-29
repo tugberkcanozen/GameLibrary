@@ -11,14 +11,14 @@ import Alamofire
 import SnapKit
 
 // MARK: - Network Control
-class Connect {
+final class Connect {
     class func isConnected() -> Bool {
         return NetworkReachabilityManager()!.isReachable
     }
 }
 
 // MARK: - Splash Screen & Swifty Gif
-class Splash: UIViewController {
+final class Splash: UIViewController {
     
     let logoAnimationView = LogoAnimationView()
     
@@ -34,7 +34,6 @@ class Splash: UIViewController {
     }
 }
 
-
 // MARK: - Network Control
 extension Splash {
     
@@ -44,13 +43,8 @@ extension Splash {
             viewController.modalPresentationStyle = .fullScreen
             self.show(viewController, sender: nil)
         } else {
-            let errorAlert = UIAlertController(title: SplashConstant.SplashNetwork.alertTitle.rawValue,
-                                               message: SplashConstant.SplashNetwork.alertMessage.rawValue,
-                                               preferredStyle: .alert
-            )
-            let errorAction = UIAlertAction(title: SplashConstant.SplashNetwork.actionTitle.rawValue,
-                                            style: .cancel
-            )
+            let errorAlert = UIAlertController(title: SplashConstant.SplashNetwork.alertTitle.rawValue, message: SplashConstant.SplashNetwork.alertMessage.rawValue,preferredStyle: .alert)
+            let errorAction = UIAlertAction(title: SplashConstant.SplashNetwork.actionTitle.rawValue,style: .cancel)
             errorAlert.addAction(errorAction)
             self.present(errorAlert, animated: true)
         }

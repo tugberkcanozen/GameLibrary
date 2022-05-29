@@ -11,12 +11,12 @@ import Foundation
 protocol IGameViewModel {
     func fetchGames(completion: @escaping ([GameResult]?) -> Void)
     func getGameDetail(gameId: Int, completion: @escaping (GameDetailResults?) -> Void)
-    var delegate: gameOutput? { get set }
+    var delegate: GameOutput? { get set }
 }
 
 // MARK: - ViewModel Class
 final class GameViewModel: IGameViewModel {
-    var delegate: gameOutput?
+    var delegate: GameOutput?
     private var service: ServiceProtocol
     init(service: ServiceProtocol) {
         self.service = service

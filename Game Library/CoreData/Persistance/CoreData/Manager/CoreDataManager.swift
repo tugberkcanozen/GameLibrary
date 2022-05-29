@@ -28,7 +28,6 @@ final class CoreDataManager {
         return request
     }
     
-// buraya bi bak
     private func uniqueGameNamePredicate(of request: NSFetchRequest<Game>, with uniqueName: String) -> NSPredicate {
         request.predicate =
             NSPredicate(format: "name == %@", uniqueName)
@@ -61,11 +60,9 @@ final class CoreDataManager {
 
     func createGame(with gameResult: GameDetailResults) {
         let game = Game(context: moc)
-        game.id = Int16(gameResult.id)
         game.name = gameResult.name
         game.metacritic = String(gameResult.metacritic)
         game.backgroundImage = gameResult.backgroundImage
-        game.favoriteBackgroundImage = gameResult.backgroundImage
         game.released = gameResult.released
         coreDataStack.saveContext()
     }

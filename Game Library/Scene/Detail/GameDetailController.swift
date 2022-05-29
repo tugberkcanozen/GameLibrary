@@ -10,15 +10,10 @@ import SnapKit
 import Kingfisher
 
 class GameDetailController: UIViewController {
-    
-    // MARK: - Service
-    private let service = Services()
-    
-    // MARK: - Data
+
+    // MARK: - Properties
     private var gameDetailResults: GameDetailResults
-    var isFavorite = Bool()
     var gameID: Int?
-    var image: UIImage?
     var errorMessage = String()
     
     // MARK: - UI Elements

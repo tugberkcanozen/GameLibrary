@@ -10,11 +10,11 @@ import SnapKit
 import Kingfisher
 
 // MARK: - ViewModel Output Protocol
-protocol gameOutput {
+protocol GameOutput {
     func selectedGame(gameId: Int)
 }
 
-final class GameHomeController: UIViewController, gameOutput {
+final class GameHomeController: UIViewController, GameOutput {
     
     func selectedGame(gameId: Int) {
         viewModel.getGameDetail(gameId: gameId) { model in

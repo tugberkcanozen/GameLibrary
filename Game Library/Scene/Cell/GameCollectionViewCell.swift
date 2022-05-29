@@ -78,7 +78,6 @@ extension GameCollectionViewCell {
             make.left.equalToSuperview()
             make.width.equalTo(150)
             make.height.equalTo(150)
-//            make.bottom.equalTo(contentView).inset(10)
         }
     }
     

@@ -77,7 +77,6 @@ extension GameFavoritesController {
 }
 
 // MARK: - CollectionView Func
-
 extension GameFavoritesController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
