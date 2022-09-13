@@ -1,13 +1,17 @@
 <h1 align=center>Tuğberk Can Özen  Appcent Case</h1> 
 
-I showed the data taken from a movie site with the mvvm architecture. You can find the technologies I used in the project and the application video below.
+I model the data I got from a game site and transferred it to the application with Alamofire. I created a detail page for the games and showed the pictures by downloading them with Kingfisher. I made the auto layout of the application programmatically with Snapkit. I hope you like.
 
 ## Technologies
 + MVVM Architecture ✅ 
 + Programmatically (Snapkit) ✅
++ SwiftyGif ✅ 
 + Kingfisher ✅ 
 + Alamofire ✅
-
++ Scroll View ✅ 
++ Collection View ✅
++ Core Data ✅
++ Splash Screen ✅
 ## Demo
 
 https://user-images.githubusercontent.com/97698649/170800041-a0efc236-d5fd-42a9-9278-8476af99bcdd.MP4
